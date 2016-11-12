@@ -1,0 +1,107 @@
+.blend-screen.pos-a-t-l.full-size.home-video-mask {
+	visibility: hidden;
+}
+
+@media screen and (min-width:64em) and (min-height: 600px){
+
+	.blend-screen.pos-a-t-l.full-size.home-video-mask {
+		visibility: visible;
+	}
+	
+	/*.. VIDEO ..*/
+	::selection {
+		background:#181818;
+		color:#fff
+	}
+
+	#video_home {
+		width:100%;
+		height:100%;
+	}
+
+	.home-video-mask {
+		background-color:#f3ecf9;
+	}
+
+	/*.. MASCARA ..*/
+	.pos-a-t-l {
+		left:0;
+		position:absolute;
+		top:0;
+	}
+
+	.full-size {
+		width:100%;
+		height:100%;
+	}
+
+	/*.blend-multiply {
+		mix-blend-mode:multiply;
+	}*/
+
+	.blend-screen {
+		mix-blend-mode:screen;
+	}
+
+	/*.. CURSOR ..*/
+	.cursor-follower {
+		pointer-events:none;
+	}
+
+	.cursor-follower .letter-hover {
+		-moz-transform:scale(.5);
+		-ms-transform:scale(.5);
+		-o-transform:scale(.5);
+		-webkit-transform:scale(.5);
+		height:18vw;
+		left:0;
+		margin:-9vw 0 0 -9vw;
+		position:absolute;
+		top:0;
+		transform:scale(.5);
+		width:18vw;
+		z-index:99;
+	}
+
+	.cursor-follower {
+		-webkit-transition:none!important;
+		-moz-transition:none!important;
+		transition:none!important;
+		z-index:9999;
+		-webkit-transform:translate3d(-200%,-200%,0);
+		-moz-transform:translate3d(-200%,-200%,0);
+		-ms-transform:translate3d(-200%,-200%,0);
+		-o-transform:translate3d(-200%,-200%,0);
+		transform:translate3d(-200%,-200%,0);
+	}
+
+	.cursor-follower .letter-hover::before {
+		-moz-transform:scale(0);
+		-moz-transition:.47s cubic-bezier(.52,.01,.16,1);
+		-ms-transform:scale(0);
+		-o-transform:scale(0);
+		-webkit-transform:scale(0);
+		-webkit-transition:.47s cubic-bezier(.52,.01,.16,1);
+		background-color:#000;
+		border-radius:20vw;
+		content:'';
+		height:100%;
+		left:0;
+		position:absolute;
+		top:0;
+		transform:scale(0);
+		transition:.47s cubic-bezier(.52,.01,.16,1);
+		width:100%;
+	}
+
+	.cursor-follower .letter-hover[data-active=on]::before {
+		-moz-transform:scale(1);
+		-moz-transition:.45s cubic-bezier(.1,.55,.29,1.44);
+		-ms-transform:scale(1);
+		-o-transform:scale(1);
+		-webkit-transform:scale(1);
+		-webkit-transition:.45s cubic-bezier(.1,.55,.29,1.44);
+		transform:scale(1);
+		transition:.45s cubic-bezier(.1,.55,.29,1.44);
+	}
+}
